@@ -15,11 +15,11 @@ def turn (pos: int, distance: str) -> int:
     # Part A:
     new_pos = (new_pos + max_pos + 1) % (max_pos + 1)
 
-
     return new_pos, zero_crossing
 
+
 def eval_file(filename: str):
-    positions = [50] # all resting positions of the wheel
+    positions = [50] # All resting positions of the dial
     total_zc = 0  # Total zero crossings
 
     with open(filename) as f:
@@ -30,6 +30,7 @@ def eval_file(filename: str):
             total_zc += zc
 
         print(f"File {filename}: \t Final pos {positions[-1]} \t --- \t NOFzeros: {positions.count(0)} \t --- \t NOFzc: {total_zc}")
+
 
 if __name__ == "__main__":
     # Tests
@@ -43,7 +44,6 @@ if __name__ == "__main__":
     assert turn(0, 'R200') == (0, 2)
     assert turn(99, 'R101') == (0, 2)
 
-    # Actual eval
-
+    # Evaluate data files
     eval_file("day_01_test.txt")
     eval_file("day_01_input.txt")
