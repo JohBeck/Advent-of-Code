@@ -1,4 +1,4 @@
-def turn (pos: int, distance: str) -> int:
+def turn_dial (pos: int, distance: str) -> int:
     max_pos = 99
 
     if(distance.startswith('R')):
@@ -25,7 +25,7 @@ def eval_file(filename: str):
     with open(filename) as f:
         lines = f.readlines()
         for line in lines:
-            val, zc  = turn(positions[-1], line.strip())
+            val, zc  = turn_dial(positions[-1], line.strip())
             positions.append(val)
             total_zc += zc
 
@@ -34,15 +34,15 @@ def eval_file(filename: str):
 
 if __name__ == "__main__":
     # Tests
-    assert turn(50, 'R10') == (60, 0)
-    assert turn(50, 'R60') == (10, 1)
-    assert turn(50, 'L1000') == (50, 10)
-    assert turn(0, 'L100') == (0, 1)
-    assert turn(99, 'R1') == (0, 1)
-    assert turn(10, 'L220') == (90, 3)
-    assert turn(0, 'R100') == (0, 1)
-    assert turn(0, 'R200') == (0, 2)
-    assert turn(99, 'R101') == (0, 2)
+    assert turn_dial(50, 'R10') == (60, 0)
+    assert turn_dial(50, 'R60') == (10, 1)
+    assert turn_dial(50, 'L1000') == (50, 10)
+    assert turn_dial(0, 'L100') == (0, 1)
+    assert turn_dial(99, 'R1') == (0, 1)
+    assert turn_dial(10, 'L220') == (90, 3)
+    assert turn_dial(0, 'R100') == (0, 1)
+    assert turn_dial(0, 'R200') == (0, 2)
+    assert turn_dial(99, 'R101') == (0, 2)
 
     # Evaluate data files
     eval_file("day_01_test.txt")
