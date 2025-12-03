@@ -1,5 +1,6 @@
+import numpy as np
 
-def part1()
+def part1():
     # Implementation for part 1
     pass
 
