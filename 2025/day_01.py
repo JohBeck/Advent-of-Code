@@ -45,5 +45,5 @@ if __name__ == "__main__":
     assert turn_dial(99, 'R101') == (0, 2)
 
     # Evaluate data files
-    eval_file("day_01_test.txt")
-    eval_file("day_01_input.txt")
+    eval_file("./2025/day_01_test.txt")
+    eval_file("./2025/day_01_input.txt")

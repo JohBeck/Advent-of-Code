@@ -52,5 +52,5 @@ if __name__ == "__main__":
     # Tests (Task 2):
     # assert is_valid_id(123123123) == False
 
-    print("Test data:", sum(get_invalid_ids_from_file("day_02_test.txt")))
-    print("Input data:", sum(get_invalid_ids_from_file("day_02_input.txt")))
+    print("Test data:", sum(get_invalid_ids_from_file("./2025/day_02_test.txt")))
+    print("Input data:", sum(get_invalid_ids_from_file("./2025/day_02_input.txt")))

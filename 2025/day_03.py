@@ -26,13 +26,13 @@ if __name__ == "__main__":
     # Part 1: joltage length 2
     print ("Part 1: joltage length 2")
     start_time = time.time()
-    print(f"Test data: {sum(get_joltages_from_file('day_03_test.txt', 2))}, -> t = {time.time() - start_time:.4f} seconds!")
+    print(f"Test data: {sum(get_joltages_from_file('./2025/day_03_test.txt', 2))}, -> t = {time.time() - start_time:.4f} seconds!")
     start_time = time.time()
-    print(f"Input data: {sum(get_joltages_from_file('day_03_input.txt', 2))}, -> t = {time.time() - start_time:.4f} seconds!")
+    print(f"Input data: {sum(get_joltages_from_file('./2025/day_03_input.txt', 2))}, -> t = {time.time() - start_time:.4f} seconds!")
 
     # Part 2: joltage length 12
     print ("\nPart 2: joltage length 12")
     start_time = time.time()
-    print(f"Test data: {sum(get_joltages_from_file('day_03_test.txt', 12))}, -> t = {time.time() - start_time:.4f} seconds!")
+    print(f"Test data: {sum(get_joltages_from_file('./2025/day_03_test.txt', 12))}, -> t = {time.time() - start_time:.4f} seconds!")
     start_time = time.time()
-    print(f"Input data: {sum(get_joltages_from_file('day_03_input.txt', 12))}, -> t = {time.time() - start_time:.4f} seconds!")
+    print(f"Input data: {sum(get_joltages_from_file('./2025/day_03_input.txt', 12))}, -> t = {time.time() - start_time:.4f} seconds!")

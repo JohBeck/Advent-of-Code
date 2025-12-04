@@ -40,11 +40,11 @@ def remove_boxes(filename: str, max_iter: int = -1):
 
 if __name__ == "__main__":
     start_time = time.time()
-    print(f"Part 1: {remove_boxes('day_04_test.txt', 1)} -> t = {time.time() - start_time} seconds.")
+    print(f"Part 1: {remove_boxes('./2025/day_04_test.txt', 1)} -> t = {time.time() - start_time} seconds.")
     start_time = time.time()
-    print(f"Part 1: {remove_boxes('day_04_input.txt', 1)} -> t = {time.time() - start_time} seconds.")
+    print(f"Part 1: {remove_boxes('./2025/day_04_input.txt', 1)} -> t = {time.time() - start_time} seconds.")
 
     start_time = time.time()
-    print(f"Part 2: {remove_boxes('day_04_test.txt')} -> t = {time.time() - start_time} seconds.")
+    print(f"Part 2: {remove_boxes('./2025/day_04_test.txt')} -> t = {time.time() - start_time} seconds.")
     start_time = time.time()
-    print(f"Part 2: {remove_boxes('day_04_input.txt')} -> t = {time.time() - start_time} seconds.")
+    print(f"Part 2: {remove_boxes('./2025/day_04_input.txt')} -> t = {time.time() - start_time} seconds.")
