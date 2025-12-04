@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 def find_joltage_in_line(input: str, joltage_length:int) -> int:
     if(len(input) < joltage_length):
@@ -24,10 +25,14 @@ def get_joltages_from_file(filename: str, joltage_length :int = 12) -> int:
 if __name__ == "__main__":
     # Part 1: joltage length 2
     print ("Part 1: joltage length 2")
-    print("Test data:", sum(get_joltages_from_file("day_03_test.txt", 2)))
-    print("Input data:", sum(get_joltages_from_file("day_03_input.txt", 2)))
+    start_time = time.time()
+    print(f"Test data: {sum(get_joltages_from_file('day_03_test.txt', 2))}, -> t = {time.time() - start_time:.4f} seconds!")
+    start_time = time.time()
+    print(f"Input data: {sum(get_joltages_from_file('day_03_input.txt', 2))}, -> t = {time.time() - start_time:.4f} seconds!")
 
     # Part 2: joltage length 12
     print ("\nPart 2: joltage length 12")
-    print("Test data:", sum(get_joltages_from_file("day_03_test.txt", 12)))
-    print("Input data:", sum(get_joltages_from_file("day_03_input.txt", 12)))
+    start_time = time.time()
+    print(f"Test data: {sum(get_joltages_from_file('day_03_test.txt', 12))}, -> t = {time.time() - start_time:.4f} seconds!")
+    start_time = time.time()
+    print(f"Input data: {sum(get_joltages_from_file('day_03_input.txt', 12))}, -> t = {time.time() - start_time:.4f} seconds!")

@@ -1,13 +1,20 @@
 import numpy as np
+import time
 
-def part1():
+def part1(filename: str):
     # Implementation for part 1
     pass
 
-def part2():
+def part2(filename: str):
     # Implementation for part 2
     pass
 
 if __name__ == "__main__":
-    print("Part 1:", part1())
-    print("Part 2:", part2())
+    start_time = time.time()
+    print(f"Part 1: {part1('day_XX_test.txt')} -> t = {time.time() - start_time} seconds.")
+    start_time = time.time()
+    print(f"Part 1: {part1('day_XX_input.txt')} -> t = {time.time() - start_time} seconds.")
+    start_time = time.time()
+    print(f"Part 2: {part2('day_XX_input.txt')} -> t = {time.time() - start_time} seconds.")
+    start_time = time.time()
+    print(f"Part 2: {part2('day_XX_test.txt')} -> t = {time.time() - start_time} seconds.")
