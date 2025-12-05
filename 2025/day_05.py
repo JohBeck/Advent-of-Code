@@ -4,31 +4,34 @@ import time
 
 '''
 Part 1:
-Idea: Merge interavls into array of transition numbers, so that the look like this:
-endX is always increased by one to distinguish between entries and exits -> end1 = val1 + 1.
-This way entries are inclusive and exits are exclusive, allowing a separation using <= and < comparisons.
+    Idea: Merge interavls into array of transition numbers:
 
-start1, end1, start2, end2, ...
+        start1, end1, start2, end2, ...
 
-To test an ingredient find the closest lower bond and see if it is a start or an end.
-start -> even number -> inside interval
-end -> odd number -> outside interval
+    endX is always increased by one to distinguish between entries and exits -> end1 = val1 + 1.
+    This way interval-entries are inclusive and interval-exits are exclusive, allowing a clean separation using <= and < comparisons.
+
+    To test an ingredient find the closest lower bond and see if it is a start or an end.
+    start -> even number -> inside interval
+    end -> odd number -> outside interval
+
 
 Part 2:
-
-use the difference between start and end points to count the number of fresh ingredients.
-sum(end - start) over all merged intervals.
+        
+    Use the difference between start and end points to count the number of fresh ingredients within each interval.
+    
+        sum(end - start) over all merged intervals.
 '''
 
 
 def merge_intervals(intervals:np.ndarray) -> np.ndarray:
     '''
-    Merge overlapping intervals into a list of unique intervals.
+    Merge overlapping intervals into an array of unique intervals.
 
     :param intervals: input intervals as array of strings ["start1-end1", "start2-end2", ...]
     :type intervals: np.ndarray
-    :return: Unique merged intervals as array of numbers [start1, end1, start2, end2, ...]
-    :rtype: ndarray[(-1,), dtype[int]]
+    :return: Unique merged intervals as array of numbers [start_unique1, end_unique1, start_unique2, end_unique2, ...]
+    :rtype: ndarray[(-1,), dtype=int]
     '''
     intervals = np.append(np.array([i.split('-') for i in intervals]).astype(int), values=[[np.inf, np.inf]], axis=0)  # add np.inf as end-of-lne tokens.
 
@@ -70,6 +73,7 @@ def merge_intervals(intervals:np.ndarray) -> np.ndarray:
 def test_ingredient(ingredient:int, intervals:np.ndarray) -> bool:
     '''
     Test if an ingredient is fresh (inside any of the intervals) or spoiled (outside all intervals).
+    
     :param ingredient: ingredient number to test
     :type ingredient: int
     :param intervals: merged intervals as array of numbers [start1, end1, start2, end2, ...]
