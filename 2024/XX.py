@@ -10,11 +10,10 @@ def part2(filename: str):
     pass
 
 if __name__ == "__main__":
+    assert part1('./2024/XX_test.txt') == 'TODO'
     start_time = time.time()
-    print(f"Part 1: {part1('./2024/XX_test.txt')} -> t = {time.time() - start_time} seconds.")
+    print(f"Part 1 - Input: {part1('./2024/XX_input.txt')} -> t = {time.time() - start_time} seconds.")    
+    
+    assert part2('./2024/XX_test.txt') == 'TODO'
     start_time = time.time()
-    print(f"Part 1: {part1('./2024/XX_input.txt')} -> t = {time.time() - start_time} seconds.")
-    start_time = time.time()
-    print(f"Part 2: {part2('./2024/XX_test.txt')} -> t = {time.time() - start_time} seconds.")
-    start_time = time.time()
-    print(f"Part 2: {part2('./2024/XX_input.txt')} -> t = {time.time() - start_time} seconds.")
+    print(f"Part 2 - Input: {part2('./2024/XX_input.txt')} -> t = {time.time() - start_time} seconds.")
