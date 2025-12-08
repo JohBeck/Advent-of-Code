@@ -17,8 +17,6 @@ The repository is organized by year. Each year has its own directory, and within
 ├──── 01.py<br />
 ├──── 02.py<br />
 ├──── ...<br />
-├── 2023/<br />
-├──── ...<br />
 └── README.md<br />
 
 
@@ -40,11 +38,14 @@ Solutions can be executed directly from the command line. For example:
 python 2025/day_01.py
 ```
 
-Each script specifies its expected file paths in the main section located at the bottom of the file.
+Each script specifies its expected file paths in the main section located at the bottom of the file:  <br />
+- `day_XX_test`: Contains the sample data provided in the challenge description. If you modify this file, be sure to update the corresponding expected outputs at the bottom of the script.
+- `day_XX_input`: Contains your personal puzzle input for that day.
+All challenge data can be downloaded from the official Advent of Code website: https://adventofcode.com/
 
 ## Requirements
 
-- Python 3.10 or newer
+- Python 3.11 or newer
 - Numpy
 - No external dependencies unless specifically noted in an individual solution
 
